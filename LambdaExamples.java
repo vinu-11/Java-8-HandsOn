@@ -28,19 +28,27 @@ class Circle implements Shape{
      }
 } */
 
-public class LambdaExamples {
+public class LambdaExample {
 
    public static void main(String[] args) {
-    /* Lamdba Expessions Start */
+      
     Shape rectangle = () -> System.out.println("Rectangle Class : Draw() method");
-    rectangle.draw();
+    //rectangle.draw();
 
     Shape square = () -> System.out.println("Sqaure Class : draw() method");
-    square.draw();
+    //square.draw();
 
     Shape circle = () -> System.out.println("Circle Class : draw() method");
-    circle.draw();
-     /* Lamdba Expessions End */
+    //circle.draw();
+
+    print(rectangle);
+    print(square);
+    print();
+
+   }
+
+   private static void print(Shape shape){
+    shape.draw();
    }
     
 }
