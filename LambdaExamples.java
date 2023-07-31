@@ -28,7 +28,7 @@ class Circle implements Shape{
      }
 } */
 
-public class LambdaExample {
+public class LambdaExamples {
 
    public static void main(String[] args) {
       
@@ -43,7 +43,7 @@ public class LambdaExample {
 
     print(rectangle);
     print(square);
-    print();
+    print(circle);
 
    }
 
