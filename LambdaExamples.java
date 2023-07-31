@@ -32,18 +32,18 @@ public class LambdaExamples {
 
    public static void main(String[] args) {
       
-    Shape rectangle = () -> System.out.println("Rectangle Class : Draw() method");
+    //Shape rectangle = () -> System.out.println("Rectangle Class : Draw() method");
     //rectangle.draw();
 
-    Shape square = () -> System.out.println("Sqaure Class : draw() method");
+    //Shape square = () -> System.out.println("Sqaure Class : draw() method");
     //square.draw();
 
-    Shape circle = () -> System.out.println("Circle Class : draw() method");
+    //Shape circle = () -> System.out.println("Circle Class : draw() method");
     //circle.draw();
 
-    print(rectangle);
-    print(square);
-    print(circle);
+    print(() -> System.out.println("Rectangle Class : Draw() method"));   /* Whole Expression passed inside the method  */
+    print(() -> System.out.println("Sqaure Class : draw() method"));
+    print(() -> System.out.println("Circle Class : draw() method"));
 
    }
 
