@@ -1,5 +1,7 @@
 package functional;
 
+/* InterFace Consumer<T> program */
+
 import java.util.function.Consumer;
 
 // class ConsumerImpl implements Consumer<String> {
