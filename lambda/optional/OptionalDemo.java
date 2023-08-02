@@ -4,7 +4,7 @@ import java.util.Optional;
 
 public class OptionalDemo {
     public static void main(String[] args) {
-        String emailId = "vinay@gmail.com";
+        String emailId = null;
 
         Optional<Object> emptyOptional = Optional.empty();
         System.out.println(emptyOptional);
@@ -13,6 +13,13 @@ public class OptionalDemo {
         System.out.println(emailIdOptional.get());
 
         Optional<String> stringOptional = Optional.ofNullable(emailId);
-        System.out.println(stringOptional.get());
+
+        if(stringOptional.isPresent()){
+            System.out.println(stringOptional.get());
+        }else{
+            System.out.println("No value Present");
+        }
+
+        //System.out.println(stringOptional.get());
     }
 }
