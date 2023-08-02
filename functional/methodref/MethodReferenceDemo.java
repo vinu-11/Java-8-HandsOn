@@ -1,6 +1,6 @@
 package functional.methodref;
 
-import java.util.Arrays;
+import java.util.*;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
@@ -73,8 +73,18 @@ public class MethodReferenceDemo {
         Arrays.sort(strArray, String::compareToIgnoreCase);
 
         // 4. Constructor Reference
+        List<String> fruits = new ArrayList<>();
+        fruits.add("Banana");
+        fruits.add("Mango");
+        fruits.add("Apple");
+        fruits.add("Watermelon");
 
+        Function<List<String>, Set<String>> setFunction = (fruitsList) -> new HashSet<>(fruitsList); //Converts fruits into lists
+        System.out.println(setFunction.apply(fruits));
 
+        //Using Method Reference
+        Function<List<String>, Set<String>> setFunctionMethodRef = HashSet::new;
+        System.out.println(setFunctionMethodRef.apply(fruits));
 
     }
 }
