@@ -36,13 +36,14 @@ public class OptionalDemo {
         emptyOptional.ifPresent((s) -> System.out.println("Value is not present")); //Returns nothing
 
 
-        String result = "abc";
+        String result = "  abc  ";
         if(result != null && result.contains("abc")){
             System.out.println(result);
         }
 
         Optional<String> optionalStr = Optional.of(result);
         optionalStr.filter(res -> res.contains("abc"))
+                .map(String::trim)
                 .ifPresent((res)-> System.out.println(res));
 
 //        if(stringOptional.isPresent()){                       //isPresent() Method
