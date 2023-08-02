@@ -51,5 +51,18 @@ public class MethodReferenceDemo {
         Printable printableMethod = methodReferenceDemo::display;
         printableMethod.print("hello world method");
 
+        // 3. Reference to the instance method of an arbitrary object
+        // Sometimes, we call a method of argument in the lambda expression.
+        // In that case, we can use a method reference to call an instance
+        // method of an arbitrary object of a specific type.
+
+        Function<String, String> stringFunction = (String input) -> input.toLowerCase();
+        System.out.println(stringFunction.apply("Vinay kumar"));
+
+        // Using lamdba function
+
+        Function<String, String> stringLambdaFunction = String::toLowerCase;
+        System.out.println(stringLambdaFunction.apply("Vinay Kumar"));
+
     }
 }
