@@ -19,6 +19,9 @@ public class OptionalDemo {
         String defaultOptional = stringOptional.orElseGet(() -> "default@gmail.com");  //orElseGet Method Uses Supplier Interace
         System.out.println(defaultOptional);
 
+        String emailNotExist = stringOptional.orElseThrow(() -> new IllegalArgumentException("Email not exist"));
+        System.out.println(emailNotExist);
+
 
 //        if(stringOptional.isPresent()){                       //isPresent() Method
 //            System.out.println(stringOptional.get());
