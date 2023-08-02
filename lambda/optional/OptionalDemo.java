@@ -34,7 +34,17 @@ public class OptionalDemo {
 
         gender.ifPresent((s) -> System.out.println("Value is present"));
         emptyOptional.ifPresent((s) -> System.out.println("Value is not present")); //Returns nothing
-        
+
+
+        String result = "abc";
+        if(result != null && result.contains("abc")){
+            System.out.println(result);
+        }
+
+        Optional<String> optionalStr = Optional.of(result);
+        optionalStr.filter(res -> res.contains("abc"))
+                .ifPresent((res)-> System.out.println(res));
+
 //        if(stringOptional.isPresent()){                       //isPresent() Method
 //            System.out.println(stringOptional.get());
 //        }else{
