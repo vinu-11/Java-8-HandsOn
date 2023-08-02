@@ -1,5 +1,6 @@
 package functional.methodref;
 
+import java.util.Arrays;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
@@ -63,6 +64,17 @@ public class MethodReferenceDemo {
 
         Function<String, String> stringLambdaFunction = String::toLowerCase;
         System.out.println(stringLambdaFunction.apply("Vinay Kumar"));
+
+        String[] strArray = {"A","E","I","O","U","a","e","i","o","u"};
+
+        //Using Lambda
+        Arrays.sort(strArray,(s1,s2) -> s1.compareToIgnoreCase(s2));
+        // Using method Reference
+        Arrays.sort(strArray, String::compareToIgnoreCase);
+
+        // 4. Constructor Reference
+
+
 
     }
 }

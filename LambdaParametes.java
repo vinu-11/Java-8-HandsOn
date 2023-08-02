@@ -4,12 +4,10 @@ interface Addable {
 }
 
 class Sum implements Addable {
-
     @Override
     public int addition(int a, int b) {
         return a + b;
     }
-
 }
 
 public class LambdaParametes {
