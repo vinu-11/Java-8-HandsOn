@@ -1,4 +1,4 @@
-package functional.methodref;
+package Lambda.functional.methodref;
 
 import java.util.*;
 import java.util.function.BiFunction;

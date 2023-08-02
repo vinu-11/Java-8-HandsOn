@@ -1,3 +1,5 @@
+package Lambda;
+
 /* Program to know how to implement Runnable Interface and Thread function using Lambda Expressions */
 class ThreadDemo implements Runnable {
 

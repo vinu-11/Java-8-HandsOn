@@ -1,4 +1,4 @@
-package functional;
+package Lambda.functional;
 
 /* Generic function for the Interface Supplier <T> uses Current data */
 
