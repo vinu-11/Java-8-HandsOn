@@ -16,6 +16,10 @@ public class OptionalDemo {
         String defaultVariable = stringOptional.orElse("default@gmail.com");  //orElse Method
         System.out.println(defaultVariable);
 
+        String defaultOptional = stringOptional.orElseGet(() -> "default@gmail.com");  //orElseGet Method Uses Supplier Interace
+        System.out.println(defaultOptional);
+
+
 //        if(stringOptional.isPresent()){                       //isPresent() Method
 //            System.out.println(stringOptional.get());
 //        }else{
