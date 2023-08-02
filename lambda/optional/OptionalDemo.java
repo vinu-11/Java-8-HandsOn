@@ -10,9 +10,9 @@ public class OptionalDemo {
         System.out.println(emptyOptional);
 
         Optional<String> emailIdOptional = Optional.of(emailId);
-        System.out.println(emailIdOptional);
+        System.out.println(emailIdOptional.get());
 
         Optional<String> stringOptional = Optional.ofNullable(emailId);
-        System.out.println(stringOptional);
+        System.out.println(stringOptional.get());
     }
 }
